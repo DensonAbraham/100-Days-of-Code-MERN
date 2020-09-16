@@ -10,11 +10,9 @@ Anyone with basic coding familiarity can do it.
 1. HTML/CSS 
 2. JS/Typescript 
 3. MERN Stack 
-4. Django 
-5. Flask 
-6. Firebase 
-7. Cordova 
-8. Docker/Kubernetes 
+4. Web Dev tools 
+5. Git version control 
+
 
 ### Progress 
 
@@ -24,5 +22,20 @@ Anyone with basic coding familiarity can do it.
   "Tech covered": "HTML/CSS positioning",
   "Progress": "Completed"
 }
+``` 
+
 ```
+{ "Day 2 Progress"
+  "Title": "Shopify Rough Clone",
+  "Tech covered": "HTML/CSS positioning",
+  "Progress": "Completed"
+}
+``` 
+
+```
+{ "Day 3 Progress"
+  "Title": "Shopify Rough Clone with Interactive Hover effects",
+  "Tech covered": "HTML/CSS positioning",
+  "Progress": "Completed"
+}
 
