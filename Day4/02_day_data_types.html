@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>30DaysOfScript:Inline Script</title>
+  </head>
+  <body>
+    <script>
+      // Primitive Data Types
+      let numOne = 3;
+      let numTwo = 3;
+      console.log(numOne == numTwo); // true
+      let js = "JavaScript";
+      let py = "Python";
+
+      // Non-Primitive Data Types
+      let nums = [1, 2, 3];
+      console.log(nums);
+      nums[0] = 10;
+      console.log(nums); // [10, 2, 3]
+
+      // Non primitive types can not be compared by value
+      let num = [1, 2, 3];
+      let numbers = [1, 2, 3];
+
+      console.log(num == numbers); // false
+
+      let userOne = {
+        name: "Asabeneh",
+        role: "teaching",
+        country: "Finland",
+      };
+
+      let userTwo = {
+        name: "Asabeneh",
+        role: "teaching",
+        country: "Finland",
+      };
+
+      console.log(userOne == userTwo); // false
+
+      // Math Object
+      const PI = Math.PI;
+      console.log(PI); // 3.141592653589793
+
+      console.log(PI); // 3.141592653589793
+
+      // Rounding to the closest number
+      // if above .5 up if less 0.5 down rounding
+
+      console.log(Math.round(PI)); // 3 to round values to the nearest number
+
+      console.log(Math.round(9.81)); // 10
+
+      console.log(Math.floor(PI)); // 3 rounding down
+
+      console.log(Math.ceil(PI)); // 4 rounding up
+
+      console.log(Math.min(-5, 3, 20, 4, 5, 10)); // -5, returns the minimum value
+
+      console.log(Math.max(-5, 3, 20, 4, 5, 10)); // 20, returns the maximum value
+
+      const randNum = Math.random(); // creates random number between 0 to 0.999999
+      console.log(randNum);
+
+      // Let us  create random number between 0 to 10
+
+      const num_ran = Math.floor(Math.random() * 11); // creates random number between 0 and 10
+      console.log(num_ran);
+
+      //Absolute value
+      console.log(Math.abs(-10)); // 10
+
+      //Square root
+      console.log(Math.sqrt(100)); // 10
+
+      console.log(Math.sqrt(2)); // 1.4142135623730951
+
+      // Power
+      console.log(Math.pow(3, 2)); // 9
+
+      console.log(Math.E); // 2.718
+
+      // Logarithm
+      // Returns the natural logarithm with base E of x, Math.log(x)
+      console.log(Math.log(2)); // 0.6931471805599453
+      console.log(Math.log(10)); // 2.302585092994046
+
+      // Concationation
+      // Declaring different variables of different data types
+      let space = " ";
+      let firstName = "Sarvesh";
+      let lastName = "Agrawal";
+      let country = "India";
+      let city = "Bangalore";
+      let language = "JavaScript";
+      let job = "Software Engineer";
+      let age = 22;
+
+      let fullName = firstName + space + lastName;
+      let personInfoOne = fullName + ". I am " + age + ". I live in " + country; // ES5 string addition
+
+      console.log(personInfoOne);
+
+      // Escape Sequences in Strings
+      console.log(
+        "I hope everyone is enjoying the 30 Days Of JavaScript challenge.\nDo you ?"
+      ); // line break
+      console.log("Days\tTopics\tExercises");
+      console.log("Day 1\t3\t5");
+      console.log("Day 2\t3\t5");
+      console.log("Day 3\t3\t5");
+      console.log("Day 4\t3\t5");
+      console.log("This is a backslash  symbol (\\)"); // To write a backslash
+      console.log(
+        'In every programming language it starts with "Hello, World!"'
+      );
+      console.log(
+        "In every programming language it starts with 'Hello, World!'"
+      );
+      console.log("The saying 'Seeing is Believing' isn't correct in 2020");
+
+      // Template Literals (Template Strings)
+
+      console.log(`The sum of 2 and 3 is 5`); // statically writing the data
+      let a = 2;
+      let b = 3;
+      console.log(`The sum of ${a} and ${b} is ${a + b}`); // injecting the data dynamically
+
+      fullName = firstName + " " + lastName;
+
+      let personInfoTwo = `I am ${fullName}. I am ${age}. I live in ${country}.`; //ES6 - String interpolation method
+      let personInfoThree = `I am ${fullName}. I live in ${city}, ${country}. I am a ${job}. I teach ${language}.`;
+      console.log(personInfoTwo);
+      console.log(personInfoThree);
+
+      a = 2;
+      b = 3;
+      console.log(`${a} is greater than ${b}: ${a > b}`);
+
+      // String Methods
+      // length
+      firstName = "Sarvesh";
+      console.log(firstName.length);
+
+      // Find char
+      console.log(firstName[0]);
+      let lastIndex = firstName.length - 1;
+      console.log(firstName[lastIndex]);
+
+      // toUpperCase()
+      console.log(firstName.toUpperCase());
+
+      // toLowerCase()
+      console.log(firstName.toLowerCase());
+
+      // substr(): It takes two arguments, the starting index and number of characters to slice.
+      console.log(firstName.substr(4, 6));
+
+      // substring(): It takes two arguments, the starting index and the stopping index but it doesn't include the character at the stopping index.
+      console.log(firstName.substring(0, 4));
+
+      // split(): The split method splits a string at a specified place.
+      let string = "30 Days Of JavaScript";
+
+      console.log(string.split()); // Changes to an array -> ["30 Days Of JavaScript"]
+      console.log(string.split(" "));
+
+      let countries = "Finland, Sweden, Norway, Denmark, and Iceland";
+      console.log(countries.split(", ")); //  ["Finland", "Sweden", "Norway", "Denmark", "and Iceland"]
+
+      // trim(): Removes trailing space in the beginning or the end of a string.
+      string = "   30 Days Of JavaScript   ";
+
+      console.log(string);
+      console.log(string.trim(" "));
+      // includes(): It takes a substring argument and it checks if substring argument exists in the string. includes() returns a boolean.
+      country = "Finland";
+
+      console.log(country.includes("fin"));
+      console.log(country.includes("Fin"));
+
+      // replace()
+      string = "30 Days Of JavaScript";
+      console.log(string.replace("JavaScript", "Python")); // 30 Days Of Python
+
+      // charAt
+      console.log(string.charAt(5));
+
+      // charCodeAt(): Takes index and it returns char code (ASCII number) of the value at that index
+      console.log(string.charCodeAt(3));
+
+      // indexOf(): Takes a substring and if the substring exists in a string it returns the first position of the substring if does not exist it returns -1
+      console.log(string.indexOf("Days")); // 3
+      console.log(string.indexOf("days")); // -1
+
+      // lastIndexOf(): Takes a substring and if the substring exists in a string it returns the last position of the substring if it does not exist it returns -1
+      string =
+        "I love JavaScript. If you do not love JavaScript what else can you love.";
+
+      console.log(string.lastIndexOf("love")); // 67
+      console.log(string.lastIndexOf("you")); // 63
+
+      // concat()
+      string = "30";
+      console.log(string.concat("Days", "Of", "JavaScript")); // 30DaysOfJavaScript
+
+      // startWith
+      string = "Love is the best to in this world";
+      console.log(string.startsWith("Love")); // true
+
+      // endsWith
+      string = "Love is the most powerful feeling in the world";
+      console.log(string.endsWith("world"));
+
+      // search
+      string =
+        "I love JavaScript. If you do not love JavaScript what else can you love.";
+      console.log(string.search("love"));
+      console.log(string.search(/javascript/gi)); // 7
+
+      // repeat()
+      string = "love";
+      console.log(string.repeat(10)); // lovelovelovelovelovelovelovelovelovelove
+
+      // match: it takes a substring or regular expression pattern as an argument and it returns an array if there is match if not it returns null. Let us see how a regular expression pattern looks like. It starts with / sign and ends with / sign.
+      string =
+        "I love JavaScript. If you do not love JavaScript what else can you love.";
+      console.log(string.match("love"));
+
+      pattern = /love/gi;
+      console.log(string.match(pattern)); // ["love", "love", "love"]
+
+      let txt =
+        "In 2019, I ran 30 Days of Python. Now, in 2020 I am super exited to start this challenge";
+      let regEx = /\d+/;
+
+      // d with escape character means d not a normal d instead acts a digit
+      // + means one or more digit numbers,
+      // if there is g after that it means global, search everywhere.
+
+      console.log(txt.match(regEx)); // ["2", "0", "1", "9", "3", "0", "2", "0", "2", "0"]
+      console.log(txt.match(/\d+/g)); // ["2019", "30", "2020"]
+
+      // Changing Data Type (Casting)
+      //  String to Int
+      num = "10";
+
+      let numInt = parseInt(num);
+      console.log(numInt); // 10
+
+      numInt = Number(num);
+      console.log(numInt); // 10
+
+      numInt = +num;
+      console.log(numInt); // 10
+
+      //  String to Int
+      num = "9.81";
+
+      let numFloat = parseFloat(num);
+      console.log(numFloat); // 10
+
+      numFloat = Number(num);
+      console.log(numFloat); // 10
+
+      numFloat = +num;
+      console.log(numFloat); // 10
+
+      // Float to Int
+      num = 9.81;
+      numInt = parseInt(num);
+      console.log(numInt); // 9
+    </script>
+  </body>
+</html>
